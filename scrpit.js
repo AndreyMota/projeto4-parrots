@@ -1,12 +1,40 @@
+let qntdCarta;
+
 while (true) {
-    let qntdCarta = prompt('Quantidade de cartas');
+    qntdCarta = prompt('Quantidade de cartas');
     if (qntdCarta <= 14 && qntdCarta >= 4 && qntdCarta % 2 === 0) {
         break;
     }
 }
 
 
-const papagaios = ['bobrossparrot.gi', 'explodyparrot.gif', 'fiestaparrot.gif', 'metalparrot.gif', 'revertitparrot.gif', 'tripletsparrot.gif', 'unicornparrot.gif'];
+let papagaios = ['bobrossparrot.gif', 'explodyparrot.gif', 'fiestaparrot.gif', 'metalparrot.gif', 'revertitparrot.gif', 'tripletsparrot.gif', 'unicornparrot.gif'];
+
+let papaga = [];
+for (i=0;i<qntdCarta/2;i++){
+    papaga.push(papagaios[i]);
+    papaga.push(papagaios[i]);
+}
+
+
+papaga.sort(comparador); // Após esta linha, a minhaArray estará embaralhada
+
+// Esta função pode ficar separada do código acima, onde você preferir
+function comparador() { 
+	return Math.random() - 0.5; 
+}
+
+console.log(papaga)
+
+const cartas = document.querySelector('.cartas');
+cartas.innerHTML = '';
+for (i=0; i<papaga.length;i++){
+    console.log(i);
+    cartas.innerHTML += `<div class="papa" id="${i}" onclick="viraCarta(this)"><div class="back face"><img src="./images/back.png" alt=""></div><div class="front face"><img class="carta" src="./images/${papaga[i]}" alt=""></div></div>`;
+}
+
+
+
 
 
 let carta1 = null;
