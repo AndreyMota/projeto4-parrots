@@ -29,7 +29,7 @@ h1 {
 .papa {
     width: 117px;
     height: 146px;
-    /*background: rgba(153, 206, 168, 1);*/
+    background: rgba(153, 206, 168, 1);
     border: 1px solid #99CEA8;
     border-radius: 5px;
     display: flex;
@@ -51,7 +51,7 @@ img {
     width: 117px;
     height: 146px;
     border-radius: 10px;
-    box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+    /*box-shadow: 1px 1px 1px rgba(0,0,0,.3);*/
     display: flex;
     align-items: center;
     justify-content: center;
@@ -65,7 +65,7 @@ img {
 }
 
 .back {
-    background-color: black;
+    /*background-color: black;*/
 }
 
 .flip {
@@ -79,3 +79,27 @@ img {
 .papa .back-face .desativado{
     transform: rotateY(-180deg);
 }*/
+
+@media (max-width: 335px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    h1 {
+        font-size: 36px;
+        line-height: 42px;
+        text-align: center;
+    }
+
+    .cartas {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        
+    }
+}
