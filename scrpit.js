@@ -35,7 +35,7 @@ const cartas = document.querySelector('.cartas');
 cartas.innerHTML = '';
 for (i=0; i<papaga.length;i++){
     //console.log(i);
-    cartas.innerHTML += `<div data-test="card" class="papa" id="${i}" onclick="viraCarta(this)"><div class="back face"><img data-test="face-down-image" src="./images/back.png" alt=""></div><div class="front face"><img data-test="face-up-image" class="carta" src="./images/${papaga[i]}" alt=""></div></div>`;
+    cartas.innerHTML += `<div data-test="card" class="papa" id="${i}" onclick="viraCarta(this)"><div class="back face"><img data-test="face-down-image" src="./images/back.png" alt=""></div><div class="front face"><img class="carta" data-test="face-up-image" src="./images/${papaga[i]}" alt=""></div></div>`;
 }
 
 
